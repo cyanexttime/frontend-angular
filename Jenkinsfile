@@ -53,7 +53,7 @@ pipeline {
                 artifacts: [
                     [artifactId: 'angularfrontend',
                      classifier: '',
-                     file: 'angular-dist-frontend-${env.BRANCH_NAME}.zip',
+                     file: "angular-dist-frontend-${env.BRANCH_NAME}.zip",
                      type: 'zip']
                     ]
                 )
