@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout: scm
+                checkout scm
             }
         }
 
@@ -47,12 +47,13 @@ pipeline {
                 protocol: 'http',
                 nexusUrl: 'poc4k-central.ovng.dev.myovcloud.com:8081',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
+                groupId: '',
                 repository: 'frontend-angular-app',
                 credentialsId: 'nexuslogin',
                 artifacts: [
                     [artifactId: 'angularfrontend',
                      classifier: '',
-                     file: 'angular-dist-frontend-${env.BRANCH_NAME}.zip',
+                     file: "angular-dist-frontend-${env.BRANCH_NAME}.zip",
                      type: 'zip']
                     ]
                 )
