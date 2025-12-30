@@ -4,7 +4,7 @@ import { ApiService } from './api.service';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Angular Frontend</h1>
+    <h1>Angular Frontend from the Development environment</h1>
     <p>{{ message }}</p>
   `
 })
