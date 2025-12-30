@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost:3000/api/hello';
+  private apiUrl = 'http://poc4k-central.ovng.dev.myovcloud.com:3001/api/hello';
 
   constructor(private http: HttpClient) {}
 
