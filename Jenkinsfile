@@ -46,7 +46,7 @@ pipeline {
                 nexusVersion: 'nexus3',
                 protocol: 'http',
                 nexusUrl: 'poc4k-central.ovng.dev.myovcloud.com:8081',
-                version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
+                version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}-${env.BRANCH_NAME}",
                 groupId: '',
                 repository: 'frontend-angular-app',
                 credentialsId: 'nexuslogin',
